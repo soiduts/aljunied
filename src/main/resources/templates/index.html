@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet"></link>
+
+  </head>
+  <body>
+
+    <h2>posted data: <span th:text="${name}"></span></h2>
+
+    <p th:text="${error}"></p>
+
+    <form method="post" th:action="@{/post}">
+      <input type="text" name="name" th:value="${name}" />
+      <input class="btn btn-default" type="submit" value="POST"/>
+    </form>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
